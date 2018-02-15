@@ -31,7 +31,7 @@ class MathFacts {
     const answer = sample(this.numbers);
     const x = answer - random(0, answer);
 
-    const y = x + answer;
+    const y = answer - x;
     const question = [x, '+', y, '=', answer];
 
     return { question, answer };

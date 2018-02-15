@@ -7,7 +7,6 @@ const pkg = require('./package.json');
 
 const libraryName = pkg.name;
 
-
 let plugins = [], outputFile;
 
 if (env === 'build') {
