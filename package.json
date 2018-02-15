@@ -1,0 +1,41 @@
+{
+  "name": "MathFacts",
+  "version": "1.0.0",
+  "description": "Javascript class that outputs math facts based on various parameters.",
+  "main": "index.js",
+  "repository": "git@github.com:randycollier/MathFacts.git",
+  "author": "randycollier <randycollier.tx@gmail.com>",
+  "license": "yes",
+  "private": false,
+  "scripts": {
+    "build": "WEBPACK_ENV=build webpack",
+    "dev": "webpack --progress --colors --watch --env dev",
+    "test": "mocha --require babel-core/register --colors ./test/*.spec.js",
+    "jesttest": "jest --watch -i --runInBand",
+    "start": "http-server",
+    "webpack": "webpack"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.1",
+    "babel-jest": "^22.2.2",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "chai": "^4.1.2",
+    "eslint": "^4.17.0",
+    "eslint-loader": "^1.9.0",
+    "jest": "^22.3.0",
+    "lodash": "^4.17.5",
+    "mocha": "^5.0.1",
+    "regenerator-runtime": "^0.11.1",
+    "webpack": "^3.11.0",
+    "yargs": "^11.0.0"
+  },
+  "dependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.26.0"
+  }
+}
