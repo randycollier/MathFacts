@@ -8,7 +8,7 @@
   "license": "yes",
   "private": false,
   "scripts": {
-    "build": "WEBPACK_ENV=build webpack",
+    "build": "WEBPACK_ENV=build webpack --env build",
     "dev": "webpack --progress --colors --watch --env dev",
     "test": "mocha --require babel-core/register --colors ./test/*.spec.js",
     "jesttest": "jest --watch -i --runInBand",
