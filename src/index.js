@@ -30,7 +30,6 @@ class MathFacts {
   addition = () => {
     const answer = sample(this.numbers);
     const x = answer - random(0, answer);
-
     const y = answer - x;
     const question = [x, '+', y, '=', answer];
 
@@ -40,7 +39,7 @@ class MathFacts {
   subraction = () => {
     const answer = sample(this.numbers);
     const x = answer + random(0, answer);
-    const y = x - answer;
+    const y = answer + x ;
 
     return [x, '-', y, '=', answer];
   }
