@@ -2,7 +2,7 @@
   "name": "MathFacts",
   "version": "1.0.0",
   "description": "Javascript class that outputs math facts based on various parameters.",
-   "main": "lib/MathFacts.js",
+  "main": "lib/MathFacts.js",
   "repository": "git@github.com:randycollier/MathFacts.git",
   "author": "randycollier <randycollier.tx@gmail.com>",
   "license": "yes",
