@@ -14,17 +14,30 @@ const Operators = {
 class MathFacts {
 
   constructor() {
-    this.wtf = 'WTF';
+    this.operators = ['add'];
+    this.numbers = [1, 2, 3, 4, 5, 6];
+    this.digitCount = Array.from(Array(9), (v, i) => i + 1);
+    this.questionCount = 10;
   }
+
   setParameters = (params = {}) => {
     this.operators = params.operators || ['add'];
     this.numbers = params.numbers || [1, 2, 3, 4, 5, 6];
     this.digitCount = params.digitCount || Array.from(Array(9), (v, i) => i + 1);
-    this.questionCount = 10;
+    this.questionCount = params.count || 10;
   }
 
   getMath = () => {
     return ['a', 'b'];
+  }
+
+  getMathSentances = () =>{
+    let sentances = {};
+
+    for (let i = 1; i <= this.questionCount; i++) {
+      sentances[i] = this.buildSentance();
+    }
+    return sentances;
   }
 
   addition = () => {
