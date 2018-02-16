@@ -1,68 +1,72 @@
-import { sample, random } from 'lodash';
+import Cat from './cat.js';
+import Dog from './dog.js';
+export { Dog, Cat };
 
-const Operators = {
-  'add': '+',
-  'add_inverse': '-',
-  'subtract': '-',
-  'subtrace_inverse': '+',
-  'divide': '/',
-  'divide_inverse': '*',
-  'multiply': '*',
-  'multiply_inverse': '/'
-};
+// import { sample, random } from 'lodash';
 
-class MathFacts {
+// const Operators = {
+//   'add': '+',
+//   'add_inverse': '-',
+//   'subtract': '-',
+//   'subtrace_inverse': '+',
+//   'divide': '/',
+//   'divide_inverse': '*',
+//   'multiply': '*',
+//   'multiply_inverse': '/'
+// };
 
-  constructor() {
-    this.wtf = 'WTF';
-  }
-  setParameters = (params = {}) => {
-    this.operators = params.operators || ['add'];
-    this.numbers = params.numbers || [1, 2, 3, 4, 5, 6];
-    this.digitCount = params.digitCount || Array.from(Array(9), (v, i) => i + 1);
-    this.questionCount = 10;
-  }
+// class MathFacts {
 
-  getMath = () => {
-    return ['a', 'b'];
-  }
+//   constructor() {
+//     this.wtf = 'WTF';
+//   }
+//   setParameters = (params = {}) => {
+//     this.operators = params.operators || ['add'];
+//     this.numbers = params.numbers || [1, 2, 3, 4, 5, 6];
+//     this.digitCount = params.digitCount || Array.from(Array(9), (v, i) => i + 1);
+//     this.questionCount = 10;
+//   }
 
-  addition = () => {
-    const answer = sample(this.numbers);
-    const x = answer - random(0, answer);
-    const y = answer - x;
-    const question = [x, '+', y, '=', answer];
+//   getMath = () => {
+//     return ['a', 'b'];
+//   }
 
-    return { question, answer };
-  }
+//   addition = () => {
+//     const answer = sample(this.numbers);
+//     const x = answer - random(0, answer);
+//     const y = answer - x;
+//     const question = [x, '+', y, '=', answer];
 
-  subraction = () => {
-    const answer = sample(this.numbers);
-    const x = answer + random(0, answer);
-    const y = answer + x ;
+//     return { question, answer };
+//   }
 
-    return [x, '-', y, '=', answer];
-  }
+//   subraction = () => {
+//     const answer = sample(this.numbers);
+//     const x = answer + random(0, answer);
+//     const y = answer + x ;
 
-  buildSentance = () => {
+//     return [x, '-', y, '=', answer];
+//   }
 
-    const operator = sample(Operators);
-    let problem;
+//   buildSentance = () => {
 
-    switch (operator) {
-      case 'add':
-        problem = this.addition();
+//     const operator = sample(Operators);
+//     let problem;
 
-        break;
+//     switch (operator) {
+//       case 'add':
+//         problem = this.addition();
 
-      default:
-        problem = {question: [], answer: ''};
-    }
+//         break;
 
-    const { question, answer } = problem;
+//       default:
+//         problem = {question: [], answer: ''};
+//     }
 
-    return { question, answer };
-  }
-}
+//     const { question, answer } = problem;
 
-export default MathFacts;
+//     return { question, answer };
+//   }
+// }
+
+// export default MathFacts;
