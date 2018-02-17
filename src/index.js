@@ -1,15 +1,15 @@
 import { sample, random } from 'lodash';
 
-const Operators = {
-  'add': '+',
-  'add_inverse': '-',
-  'subtract': '-',
-  'subtrace_inverse': '+',
-  'divide': '/',
-  'divide_inverse': '*',
-  'multiply': '*',
-  'multiply_inverse': '/'
-};
+// const Operators = {
+//   'add': '+',
+//   'add_inverse': '-',
+//   'subtract': '-',
+//   'subtrace_inverse': '+',
+//   'divide': '/',
+//   'divide_inverse': '*',
+//   'multiply': '*',
+//   'multiply_inverse': '/'
+// };
 
 class MathFacts {
 
@@ -37,6 +37,7 @@ class MathFacts {
     for (let i = 1; i <= this.questionCount; i++) {
       sentances[i] = this.buildSentance();
     }
+
     return sentances;
   }
 
@@ -59,7 +60,7 @@ class MathFacts {
 
   buildSentance = () => {
 
-    const operator = sample(Operators);
+    const operator = sample(this.operators);
     let problem;
 
     switch (operator) {
